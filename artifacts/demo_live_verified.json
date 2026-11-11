@@ -1,0 +1,195 @@
+[
+  {
+    "event": "started",
+    "mode": "live",
+    "question": "GitHub Actions hiện có hoạt động bình thường không? Nêu thời điểm lấy dữ liệu và nguồn.",
+    "provider": "gemini",
+    "model": "gemini-3.8-flash"
+  },
+  {
+    "event": "model_start",
+    "step": 1
+  },
+  {
+    "event": "model",
+    "step": 1,
+    "finish": "tool_calls",
+    "tool_calls": 1
+  },
+  {
+    "event": "tool_start",
+    "step": 1,
+    "name": "get_status",
+    "tool_call_id": "call_2188035719031569121",
+    "arguments": "{\"component\":\"Actions\",\"provider\":\"github\"}"
+  },
+  {
+    "event": "tool",
+    "step": 1,
+    "name": "get_status",
+    "tool_call_id": "call_2188035719031569121",
+    "arguments": {
+      "component": "Actions",
+      "provider": "github"
+    },
+    "result": {
+      "provider": "github",
+      "captured_at": "2026-11-11T12:27:20.997092+00:00",
+      "overall": {
+        "indicator": "none",
+        "description": "All Systems Operational"
+      },
+      "components": [
+        {
+          "name": "Actions",
+          "status": "operational"
+        }
+      ],
+      "incidents": [
+        {
+          "id": "hnf21m9jkl3c",
+          "name": "Incident with Git Operations and Pull Requests",
+          "status": "resolved",
+          "updated_at": "2026-11-10T17:55:03.579Z"
+        },
+        {
+          "id": "tp8cghg7tlc4",
+          "name": "Incident with Actions and Checks API",
+          "status": "resolved",
+          "updated_at": "2026-11-09T18:59:32.604Z"
+        },
+        {
+          "id": "xxb3l2bm76dr",
+          "name": "Incident with Webhooks and Actions",
+          "status": "resolved",
+          "updated_at": "2026-11-09T11:50:35.805Z"
+        },
+        {
+          "id": "pfbmpxxfq1cy",
+          "name": "Degraded performance for multiple GitHub services",
+          "status": "resolved",
+          "updated_at": "2026-11-06T00:20:49.369Z"
+        },
+        {
+          "id": "t89g2q1800fr",
+          "name": "Incident with Actions",
+          "status": "resolved",
+          "updated_at": "2026-11-05T17:42:35.455Z"
+        }
+      ],
+      "matching_incidents_in_last_50": 26,
+      "note": "Chỉ tìm theo chuỗi trong 50 incident gần nhất; không tìm thấy không chứng minh không có sự cố.",
+      "source": "https://www.githubstatus.com"
+    }
+  },
+  {
+    "event": "model_start",
+    "step": 2
+  },
+  {
+    "event": "model",
+    "step": 2,
+    "finish": "stop",
+    "tool_calls": 0
+  },
+  {
+    "event": "completed",
+    "step": 2
+  },
+  {
+    "event": "result",
+    "result": {
+      "status": "completed",
+      "answer": "**GitHub Actions hiện đang hoạt động bình thường.**\n\nChi tiết trạng thái:\n- **Trạng thái component GitHub Actions:** `operational` (hoạt động bình thường).\n- **Trạng thái tổng thể GitHub:** `All Systems Operational` (chỉ số: `none` - không có sự cố diện rộng).\n- **Sự cố gần đây:** Các sự cố gần nhất liên quan đến Actions (chẳng hạn sự cố ngày 09/11/2026 và 05/11/2026) đều đã được đánh dấu là đã giải quyết (`resolved`).\n\n**Thông tin truy vấn:**\n- **Thời điểm lấy dữ liệu:** `2026-11-11T12:27:20.997092+00:00`\n- **Nguồn:** [GitHub Status](https://www.githubstatus.com)",
+      "trace": [
+        {
+          "event": "model",
+          "step": 1,
+          "finish": "tool_calls",
+          "tool_calls": 1
+        },
+        {
+          "event": "tool",
+          "step": 1,
+          "name": "get_status",
+          "tool_call_id": "call_2188035719031569121",
+          "arguments": {
+            "component": "Actions",
+            "provider": "github"
+          },
+          "result": {
+            "provider": "github",
+            "captured_at": "2026-11-11T12:27:20.997092+00:00",
+            "overall": {
+              "indicator": "none",
+              "description": "All Systems Operational"
+            },
+            "components": [
+              {
+                "name": "Actions",
+                "status": "operational"
+              }
+            ],
+            "incidents": [
+              {
+                "id": "hnf21m9jkl3c",
+                "name": "Incident with Git Operations and Pull Requests",
+                "status": "resolved",
+                "updated_at": "2026-11-10T17:55:03.579Z"
+              },
+              {
+                "id": "tp8cghg7tlc4",
+                "name": "Incident with Actions and Checks API",
+                "status": "resolved",
+                "updated_at": "2026-11-09T18:59:32.604Z"
+              },
+              {
+                "id": "xxb3l2bm76dr",
+                "name": "Incident with Webhooks and Actions",
+                "status": "resolved",
+                "updated_at": "2026-11-09T11:50:35.805Z"
+              },
+              {
+                "id": "pfbmpxxfq1cy",
+                "name": "Degraded performance for multiple GitHub services",
+                "status": "resolved",
+                "updated_at": "2026-11-06T00:20:49.369Z"
+              },
+              {
+                "id": "t89g2q1800fr",
+                "name": "Incident with Actions",
+                "status": "resolved",
+                "updated_at": "2026-11-05T17:42:35.455Z"
+              }
+            ],
+            "matching_incidents_in_last_50": 26,
+            "note": "Chỉ tìm theo chuỗi trong 50 incident gần nhất; không tìm thấy không chứng minh không có sự cố.",
+            "source": "https://www.githubstatus.com"
+          }
+        },
+        {
+          "event": "model",
+          "step": 2,
+          "finish": "stop",
+          "tool_calls": 0
+        },
+        {
+          "event": "completed",
+          "step": 2
+        }
+      ],
+      "usage": [
+        {
+          "completion_tokens": 22,
+          "prompt_tokens": 1223,
+          "total_tokens": 1301
+        },
+        {
+          "completion_tokens": 197,
+          "prompt_tokens": 1766,
+          "total_tokens": 2225
+        }
+      ]
+    }
+  }
+]

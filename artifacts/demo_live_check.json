@@ -1,0 +1,70 @@
+[
+  {
+    "event": "started",
+    "mode": "live",
+    "question": "GitHub Actions status and recent incidents, with sources.",
+    "provider": "gemini",
+    "model": "gemini-3.8-flash"
+  },
+  {
+    "event": "model_start",
+    "step": 1
+  },
+  {
+    "event": "model_retry",
+    "step": 1,
+    "error": "PROVIDER_ERROR: RuntimeError",
+    "retry": 1
+  },
+  {
+    "event": "model_start",
+    "step": 2
+  },
+  {
+    "event": "model_retry",
+    "step": 2,
+    "error": "PROVIDER_ERROR: RuntimeError",
+    "retry": 2
+  },
+  {
+    "event": "model_start",
+    "step": 3
+  },
+  {
+    "event": "error",
+    "step": 3,
+    "error": "PROVIDER_ERROR: RuntimeError"
+  },
+  {
+    "event": "result",
+    "result": {
+      "status": "error",
+      "answer": "",
+      "trace": [
+        {
+          "event": "model_retry",
+          "step": 1,
+          "error": "PROVIDER_ERROR: RuntimeError",
+          "retry": 1
+        },
+        {
+          "event": "model_retry",
+          "step": 2,
+          "error": "PROVIDER_ERROR: RuntimeError",
+          "retry": 2
+        },
+        {
+          "event": "error",
+          "step": 3,
+          "error": "PROVIDER_ERROR: RuntimeError"
+        }
+      ],
+      "usage": [
+        {},
+        {},
+        {}
+      ],
+      "error": "PROVIDER_ERROR: RuntimeError"
+    }
+  }
+]

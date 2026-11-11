@@ -23,7 +23,17 @@ def run_case(case, args):
         result = {'status': 'error', 'answer': '', 'trace': [], 'usage': [], 'error': 'run_agent trả kết quả không hợp lệ.'}
     try:
         judge = Provider(args.judge_provider, args.judge_model)
-        grade = grade_case(case, result, judge)
+        judge_errors = []
+        # Retry chỉ dành cho output judge không hợp lệ; giữ nguyên agent result,
+        # rubric và kiểm tra code. Chấp nhận ngay điểm hợp lệ đầu tiên, kể cả 0.
+        for attempt in range(1, getattr(args, 'judge_retries', 2) + 2):
+            grade = grade_case(case, result, judge)
+            if (grade.get('status') != 'unscored'
+                    or not grade.get('reason', '').startswith('Judge lỗi:')):
+                break
+            judge_errors.append(grade['reason'])
+        grade['judge_attempts'] = attempt
+        grade['judge_errors'] = judge_errors
     except Exception as exc:
         grade = {'score': None, 'status': 'unscored', 'reason': str(exc), 'judge_usage': {}}
     return {'id': case['id'], 'question': case['question'], 'expected': case['expected'],
@@ -42,6 +52,8 @@ def main():
     parser.add_argument('--case', help='Ví dụ E2 hoặc H1; bỏ trống để chạy toàn bộ')
     parser.add_argument('--max-steps', type=int, default=None, help='Giới hạn model calls mỗi case: mặc định 8, bonus 16')
     parser.add_argument('--workers', type=int, default=1, help='Số case chạy đồng thời (mặc định 1)')
+    parser.add_argument('--judge-retries', type=int, default=2,
+                        help='Retry khi judge trả output lỗi, không retry điểm hợp lệ (mặc định 2)')
     parser.add_argument('--output', default='eval_results.json')
     args = parser.parse_args()
     args.judge_provider = args.judge_provider or args.provider
@@ -51,6 +63,8 @@ def main():
     args.max_steps = args.max_steps if args.max_steps is not None else (16 if args.bonus else 8)
     if args.max_steps < 1 or not 1 <= args.workers <= 8:
         parser.error('--max-steps phải >= 1 và --workers phải từ 1 đến 8')
+    if not 0 <= args.judge_retries <= 5:
+        parser.error('--judge-retries phải từ 0 đến 5')
     cases_path = (Path(__file__).resolve().parents[1] / 'bonus' / 'cases.json') if args.bonus else (Path(__file__).parent / 'cases.json')
     cases = json.loads(cases_path.read_text(encoding='utf-8'))
     selected = [c for c in cases if not args.case or c['id'] == args.case.upper()]
@@ -65,6 +79,7 @@ def main():
         results = list(pool.map(run_and_print, selected))
     report = {'summary': summarize(results), 'config': {'provider': args.provider, 'model': args.model,
               'judge_provider': args.judge_provider, 'judge_model': args.judge_model, 'max_steps': args.max_steps,
+              'judge_retries': args.judge_retries,
               'dataset': 'bonus' if args.bonus else 'core'}, 'cases': results}
     summary = report['summary']
     if args.bonus:

@@ -1,0 +1,13 @@
+{
+  "head": "dfdc97584a71cf6a8dd9a4bf97e7e064c89ceb3f",
+  "hashes": {
+    "agent.py": "43d05d20067150ea41532435eff5d8de1829476472d9e49ea445545a3a2b4adf",
+    "eval_before.json": "df12aaf16503aa5e7d4b6ea4da8ceb843e2d45b1d334598c03e25f610a752a74",
+    "eval_after.json": "ed701bfec42dca2d6d75d6c825ec2cfdba940dc654675d3b1754a9491f5f007a",
+    "evals/run_evals.py": "0074403ce7243581c0d30489623013df6f56dc343d53c1ccb2d33098c906444c"
+  },
+  "provenance_notice_2026_11_12": {
+    "status": "historical_record_not_current_verification",
+    "details": "See REPORT_PROVENANCE.md. Current eval_before.json does not match the recorded original baseline SHA-256; do not claim baseline preservation or CP4 improvement from the current report pair."
+  }
+}

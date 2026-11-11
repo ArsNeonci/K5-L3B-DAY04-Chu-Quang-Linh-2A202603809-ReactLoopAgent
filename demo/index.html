@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Status Agent · Demo</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script></head>
+<body>
+<header><a class="brand" href="/">◉ STATUS LAB <span>/ Agent demo</span></a><span class="local">LOCAL DEMO</span></header>
+<main>
+<section class="intro"><span class="eyebrow">STATUS INVESTIGATION AGENT</span><h1>Từ câu hỏi đến bằng chứng.</h1><p>Theo dõi agent gọi model, truy vấn status và tổng hợp câu trả lời qua từng bước.</p></section>
+<div class="workspace">
+<aside class="panel"><h2>Thiết lập điều tra</h2><p id="config" class="muted">Đang đọc cấu hình…</p>
+<form id="form">
+<label for="source">Nguồn dữ liệu</label><select id="source"><option value="snapshot">Snapshot · dữ liệu lưu sẵn</option><option value="live">Live · API status thật</option><option value="replay">Phát lại H1 · không gọi API</option></select>
+<p id="mode-note" class="hint"></p>
+<label for="suite">Bộ công cụ</label><select id="suite"><option value="core">Bài chính · GitHub, Cloudflare</option><option value="bonus">Bonus · 5 nhà cung cấp</option></select>
+<label for="steps">Giới hạn lượt gọi model</label><input id="steps" type="number" min="1" max="32" value="16" required>
+<label for="question">Câu hỏi</label><textarea id="question" rows="5" maxlength="5000" required>GitHub Actions có sự cố gì gần đây? Hãy kiểm tra incident và dẫn nguồn.</textarea>
+<button type="button" id="sample" class="secondary">Dùng câu hỏi mẫu</button>
+<button id="run" type="submit">Bắt đầu điều tra ↗</button>
+</form><p class="hint">Snapshot và live gọi LLM thật, sử dụng key từ .env trên máy chủ và có thể tốn token.</p></aside>
+<section class="output"><div class="panel progress"><div class="section-head"><h2>Tiến trình điều tra</h2><span id="status" role="status" aria-live="polite">Sẵn sàng</span></div>
+<p class="hint">Hiển thị các bước thực thi và dữ liệu quan sát được, không phải suy nghĩ nội bộ của model. Kết quả tool được đưa lại cho model ở lượt tiếp theo.</p>
+<div class="metrics"><div><strong id="models">0</strong><span>Lượt model</span></div><div><strong id="tools">0</strong><span>Kết quả tool</span></div><div><strong id="elapsed">0s</strong><span>Thời gian</span></div></div>
+<ol id="timeline"><li class="empty">Nhập câu hỏi rồi bắt đầu, hoặc chọn phát lại H1 để xem demo không cần API key.</li></ol></div>
+<div class="panel answer-panel"><div class="section-head"><h2>Kết quả cuối cùng</h2><button id="download" class="secondary" disabled>Tải JSON</button></div><p id="error" role="alert"></p><div id="answer" class="answer">Câu trả lời sẽ xuất hiện sau khi agent hoàn tất điều tra.</div><details id="raw-wrap" hidden><summary>Kết quả JSON và usage</summary><pre id="raw"></pre></details></div>
+</section></div></main><footer>Python agent loop · Model → Tools → Observations → Answer</footer>
+</body></html>

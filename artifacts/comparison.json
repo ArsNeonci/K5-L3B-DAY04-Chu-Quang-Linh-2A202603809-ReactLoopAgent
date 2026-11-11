@@ -1,0 +1,697 @@
+{
+  "config": {
+    "provider": "gemini",
+    "model": "gemini-3.8-flash",
+    "judge_provider": "gemini",
+    "judge_model": "gemini-3.8-flash",
+    "max_steps": 8,
+    "judge_retries": 2,
+    "dataset": "core"
+  },
+  "workers": 3,
+  "summary_before": {
+    "total_cases": 22,
+    "scored_cases": 22,
+    "unscored_cases": 0,
+    "score_0_100": 100.0,
+    "partial_mean_0_100": null
+  },
+  "summary_after": {
+    "total_cases": 22,
+    "scored_cases": 22,
+    "unscored_cases": 0,
+    "score_0_100": 99.91,
+    "partial_mean_0_100": null
+  },
+  "cases": [
+    {
+      "id": "E1",
+      "before": {
+        "score": 100,
+        "model_calls": 4,
+        "tool_calls": 3,
+        "agent_tokens": 10357,
+        "judge_tokens": 3275,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 5,
+        "tool_calls": 4,
+        "agent_tokens": 14709,
+        "judge_tokens": 4108,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 1,
+        "tool_calls": 1,
+        "agent_tokens": 4352,
+        "judge_tokens": 833,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "E2",
+      "before": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 3,
+        "agent_tokens": 6899,
+        "judge_tokens": 2838,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 3,
+        "agent_tokens": 7537,
+        "judge_tokens": 2981,
+        "judge_attempts": 2,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": 638,
+        "judge_tokens": 143,
+        "judge_attempts": 1,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "E3",
+      "before": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 2,
+        "agent_tokens": 5763,
+        "judge_tokens": 2005,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 2,
+        "agent_tokens": 6193,
+        "judge_tokens": 2386,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": 430,
+        "judge_tokens": 381,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "E4",
+      "before": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 1,
+        "agent_tokens": 3812,
+        "judge_tokens": 1903,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 1,
+        "agent_tokens": 3959,
+        "judge_tokens": 1702,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": 147,
+        "judge_tokens": -201,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "E5",
+      "before": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 2,
+        "agent_tokens": 5881,
+        "judge_tokens": 2233,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 2,
+        "agent_tokens": 6622,
+        "judge_tokens": 2664,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": 741,
+        "judge_tokens": 431,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "E6",
+      "before": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 2,
+        "agent_tokens": 4353,
+        "judge_tokens": 997,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 1,
+        "agent_tokens": 2872,
+        "judge_tokens": 981,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": -1,
+        "tool_calls": -1,
+        "agent_tokens": -1481,
+        "judge_tokens": -16,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "A1",
+      "before": {
+        "score": 100,
+        "model_calls": 4,
+        "tool_calls": 6,
+        "agent_tokens": 12934,
+        "judge_tokens": 4771,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 4,
+        "tool_calls": 7,
+        "agent_tokens": 14127,
+        "judge_tokens": 5508,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 1,
+        "agent_tokens": 1193,
+        "judge_tokens": 737,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "A2",
+      "before": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 4413,
+        "judge_tokens": 2605,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 98,
+        "model_calls": 2,
+        "tool_calls": 1,
+        "agent_tokens": 4132,
+        "judge_tokens": 2133,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": -2,
+        "model_calls": 0,
+        "tool_calls": -1,
+        "agent_tokens": -281,
+        "judge_tokens": -472,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "A3",
+      "before": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 3859,
+        "judge_tokens": 1778,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 4265,
+        "judge_tokens": 1782,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": 406,
+        "judge_tokens": 4,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "A4",
+      "before": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 1,
+        "agent_tokens": 3427,
+        "judge_tokens": 1791,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 1,
+        "agent_tokens": 3716,
+        "judge_tokens": 1683,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": 289,
+        "judge_tokens": -108,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "A5",
+      "before": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 1,
+        "agent_tokens": 4217,
+        "judge_tokens": 1703,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 2,
+        "agent_tokens": 6834,
+        "judge_tokens": 2296,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 1,
+        "tool_calls": 1,
+        "agent_tokens": 2617,
+        "judge_tokens": 593,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "A6",
+      "before": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 2,
+        "agent_tokens": 7612,
+        "judge_tokens": 2879,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 2,
+        "agent_tokens": 7435,
+        "judge_tokens": 3136,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": -177,
+        "judge_tokens": 257,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "A7",
+      "before": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 2,
+        "agent_tokens": 6617,
+        "judge_tokens": 2430,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 4,
+        "agent_tokens": 7514,
+        "judge_tokens": 3006,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 2,
+        "agent_tokens": 897,
+        "judge_tokens": 576,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "A8",
+      "before": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 5751,
+        "judge_tokens": 2908,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 5726,
+        "judge_tokens": 2916,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": -25,
+        "judge_tokens": 8,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "H1",
+      "before": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 3,
+        "agent_tokens": 9629,
+        "judge_tokens": 4386,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 3,
+        "agent_tokens": 9207,
+        "judge_tokens": 3635,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": -422,
+        "judge_tokens": -751,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "H2",
+      "before": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 4375,
+        "judge_tokens": 2365,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 5307,
+        "judge_tokens": 2606,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": 932,
+        "judge_tokens": 241,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "H3",
+      "before": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 3809,
+        "judge_tokens": 1755,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 3720,
+        "judge_tokens": 1828,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": -89,
+        "judge_tokens": 73,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "H4",
+      "before": {
+        "score": 100,
+        "model_calls": 1,
+        "tool_calls": 0,
+        "agent_tokens": 1285,
+        "judge_tokens": 878,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 1,
+        "tool_calls": 0,
+        "agent_tokens": 1472,
+        "judge_tokens": 750,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": 187,
+        "judge_tokens": -128,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "H5",
+      "before": {
+        "score": 100,
+        "model_calls": 4,
+        "tool_calls": 3,
+        "agent_tokens": 10966,
+        "judge_tokens": 3444,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 4,
+        "tool_calls": 3,
+        "agent_tokens": 11158,
+        "judge_tokens": 3181,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": 192,
+        "judge_tokens": -263,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "H6",
+      "before": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 3,
+        "agent_tokens": 10526,
+        "judge_tokens": 4876,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 3,
+        "tool_calls": 3,
+        "agent_tokens": 10840,
+        "judge_tokens": 4976,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": 314,
+        "judge_tokens": 100,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "H7",
+      "before": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 3920,
+        "judge_tokens": 1719,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 4134,
+        "judge_tokens": 1780,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": 214,
+        "judge_tokens": 61,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    },
+    {
+      "id": "H8",
+      "before": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 5121,
+        "judge_tokens": 3107,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "after": {
+        "score": 100,
+        "model_calls": 2,
+        "tool_calls": 2,
+        "agent_tokens": 5851,
+        "judge_tokens": 3216,
+        "judge_attempts": 1,
+        "model_retries": 0
+      },
+      "delta": {
+        "score": 0,
+        "model_calls": 0,
+        "tool_calls": 0,
+        "agent_tokens": 730,
+        "judge_tokens": 109,
+        "judge_attempts": 0,
+        "model_retries": 0
+      }
+    }
+  ],
+  "sha256": {
+    "eval_before.json": "df12aaf16503aa5e7d4b6ea4da8ceb843e2d45b1d334598c03e25f610a752a74",
+    "eval_after.json": "ed701bfec42dca2d6d75d6c825ec2cfdba940dc654675d3b1754a9491f5f007a",
+    "agent.py": "43d05d20067150ea41532435eff5d8de1829476472d9e49ea445545a3a2b4adf"
+  },
+  "provenance_notice_2026_11_12": {
+    "status": "historical_record_not_current_verification",
+    "details": "See REPORT_PROVENANCE.md. Current eval_before.json does not match the recorded original baseline SHA-256; do not claim baseline preservation or CP4 improvement from the current report pair."
+  }
+}

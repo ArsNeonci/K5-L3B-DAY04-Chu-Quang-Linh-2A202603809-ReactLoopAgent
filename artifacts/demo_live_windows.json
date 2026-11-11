@@ -1,0 +1,612 @@
+[
+  {
+    "event": "started",
+    "mode": "live",
+    "question": "GitHub Actions status and recent incidents, with sources.",
+    "provider": "gemini",
+    "model": "gemini-3.8-flash"
+  },
+  {
+    "event": "model_start",
+    "step": 1
+  },
+  {
+    "event": "model",
+    "step": 1,
+    "finish": "tool_calls",
+    "tool_calls": 1
+  },
+  {
+    "event": "tool_start",
+    "step": 1,
+    "name": "get_status",
+    "tool_call_id": "call_14306857464915203231",
+    "arguments": "{\"provider\":\"github\",\"component\":\"Actions\"}"
+  },
+  {
+    "event": "tool",
+    "step": 1,
+    "name": "get_status",
+    "tool_call_id": "call_14306857464915203231",
+    "arguments": {
+      "provider": "github",
+      "component": "Actions"
+    },
+    "result": {
+      "provider": "github",
+      "captured_at": "2026-11-11T12:22:37.643256+00:00",
+      "overall": {
+        "indicator": "none",
+        "description": "All Systems Operational"
+      },
+      "components": [
+        {
+          "name": "Actions",
+          "status": "operational"
+        }
+      ],
+      "incidents": [
+        {
+          "id": "hnf21m9jkl3c",
+          "name": "Incident with Git Operations and Pull Requests",
+          "status": "resolved",
+          "updated_at": "2026-11-10T17:55:03.579Z"
+        },
+        {
+          "id": "tp8cghg7tlc4",
+          "name": "Incident with Actions and Checks API",
+          "status": "resolved",
+          "updated_at": "2026-11-09T18:59:32.604Z"
+        },
+        {
+          "id": "xxb3l2bm76dr",
+          "name": "Incident with Webhooks and Actions",
+          "status": "resolved",
+          "updated_at": "2026-11-09T11:50:35.805Z"
+        },
+        {
+          "id": "pfbmpxxfq1cy",
+          "name": "Degraded performance for multiple GitHub services",
+          "status": "resolved",
+          "updated_at": "2026-11-06T00:20:49.369Z"
+        },
+        {
+          "id": "t89g2q1800fr",
+          "name": "Incident with Actions",
+          "status": "resolved",
+          "updated_at": "2026-11-05T17:42:35.455Z"
+        }
+      ],
+      "matching_incidents_in_last_50": 26,
+      "note": "Chỉ tìm theo chuỗi trong 50 incident gần nhất; không tìm thấy không chứng minh không có sự cố.",
+      "source": "https://www.githubstatus.com"
+    }
+  },
+  {
+    "event": "model_start",
+    "step": 2
+  },
+  {
+    "event": "model",
+    "step": 2,
+    "finish": "tool_calls",
+    "tool_calls": 4
+  },
+  {
+    "event": "tool_start",
+    "step": 2,
+    "name": "get_incident_details",
+    "tool_call_id": "call_14806925060542230630",
+    "arguments": "{\"provider\":\"github\",\"incident_id\":\"tp8cghg7tlc4\"}"
+  },
+  {
+    "event": "tool",
+    "step": 2,
+    "name": "get_incident_details",
+    "tool_call_id": "call_14806925060542230630",
+    "arguments": {
+      "provider": "github",
+      "incident_id": "tp8cghg7tlc4"
+    },
+    "result": {
+      "ok": true,
+      "provider": "github",
+      "captured_at": "2026-11-11T12:22:37.643256+00:00",
+      "id": "tp8cghg7tlc4",
+      "name": "Incident with Actions and Checks API",
+      "status": "resolved",
+      "created_at": "2026-11-09T18:12:37.242Z",
+      "updated_at": "2026-11-09T18:59:32.604Z",
+      "components": [
+        "Webhooks",
+        "Actions",
+        "Pages"
+      ],
+      "updates": [
+        {
+          "status": "resolved",
+          "created_at": "2026-11-09T18:59:32.565Z",
+          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "truncated": false
+        },
+        {
+          "status": "monitoring",
+          "created_at": "2026-11-09T18:43:24.557Z",
+          "body": "The degradation affecting Actions, Pages and Webhooks has been mitigated. We are monitoring to ensure stability.",
+          "truncated": false
+        },
+        {
+          "status": "investigating",
+          "created_at": "2026-11-09T18:12:37.331Z",
+          "body": "We are investigating reports of degraded availability for Actions",
+          "truncated": false
+        }
+      ],
+      "updates_total": 7,
+      "url": "https://stspg.io/7yw63xl9ztrv"
+    }
+  },
+  {
+    "event": "tool_start",
+    "step": 2,
+    "name": "get_incident_details",
+    "tool_call_id": "call_14806925060542233555",
+    "arguments": "{\"provider\":\"github\",\"incident_id\":\"xxb3l2bm76dr\"}"
+  },
+  {
+    "event": "tool",
+    "step": 2,
+    "name": "get_incident_details",
+    "tool_call_id": "call_14806925060542233555",
+    "arguments": {
+      "provider": "github",
+      "incident_id": "xxb3l2bm76dr"
+    },
+    "result": {
+      "ok": true,
+      "provider": "github",
+      "captured_at": "2026-11-11T12:22:37.643256+00:00",
+      "id": "xxb3l2bm76dr",
+      "name": "Incident with Webhooks and Actions",
+      "status": "resolved",
+      "created_at": "2026-11-09T10:00:35.232Z",
+      "updated_at": "2026-11-09T11:50:35.805Z",
+      "components": [
+        "Webhooks",
+        "Actions"
+      ],
+      "updates": [
+        {
+          "status": "resolved",
+          "created_at": "2026-11-09T11:50:35.774Z",
+          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "truncated": false
+        },
+        {
+          "status": "monitoring",
+          "created_at": "2026-11-09T11:45:07.476Z",
+          "body": "The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability.",
+          "truncated": false
+        },
+        {
+          "status": "investigating",
+          "created_at": "2026-11-09T10:00:35.648Z",
+          "body": "We are investigating reports of degraded performance for Actions and Webhooks",
+          "truncated": false
+        }
+      ],
+      "updates_total": 8,
+      "url": "https://stspg.io/4vdghm7tycm4"
+    }
+  },
+  {
+    "event": "tool_start",
+    "step": 2,
+    "name": "get_incident_details",
+    "tool_call_id": "call_14806925060542232384",
+    "arguments": "{\"incident_id\":\"t89g2q1800fr\",\"provider\":\"github\"}"
+  },
+  {
+    "event": "tool",
+    "step": 2,
+    "name": "get_incident_details",
+    "tool_call_id": "call_14806925060542232384",
+    "arguments": {
+      "incident_id": "t89g2q1800fr",
+      "provider": "github"
+    },
+    "result": {
+      "ok": true,
+      "provider": "github",
+      "captured_at": "2026-11-11T12:22:37.643256+00:00",
+      "id": "t89g2q1800fr",
+      "name": "Incident with Actions",
+      "status": "resolved",
+      "created_at": "2026-11-05T16:50:11.086Z",
+      "updated_at": "2026-11-05T17:42:35.455Z",
+      "components": [
+        "Actions"
+      ],
+      "updates": [
+        {
+          "status": "resolved",
+          "created_at": "2026-11-05T17:42:35.425Z",
+          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "truncated": false
+        },
+        {
+          "status": "monitoring",
+          "created_at": "2026-11-05T17:04:46.807Z",
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "truncated": false
+        },
+        {
+          "status": "investigating",
+          "created_at": "2026-11-05T16:50:11.189Z",
+          "body": "We are investigating reports of degraded performance for Actions",
+          "truncated": false
+        }
+      ],
+      "updates_total": 4,
+      "url": "https://stspg.io/lv4q3xm9r0rk"
+    }
+  },
+  {
+    "event": "tool_start",
+    "step": 2,
+    "name": "get_incident_details",
+    "tool_call_id": "call_14806925060542231213",
+    "arguments": "{\"incident_id\":\"hnf21m9jkl3c\",\"provider\":\"github\"}"
+  },
+  {
+    "event": "tool",
+    "step": 2,
+    "name": "get_incident_details",
+    "tool_call_id": "call_14806925060542231213",
+    "arguments": {
+      "incident_id": "hnf21m9jkl3c",
+      "provider": "github"
+    },
+    "result": {
+      "ok": true,
+      "provider": "github",
+      "captured_at": "2026-11-11T12:22:37.643256+00:00",
+      "id": "hnf21m9jkl3c",
+      "name": "Incident with Git Operations and Pull Requests",
+      "status": "resolved",
+      "created_at": "2026-11-10T16:10:52.174Z",
+      "updated_at": "2026-11-10T17:55:03.579Z",
+      "components": [
+        "Pull Requests",
+        "Actions"
+      ],
+      "updates": [
+        {
+          "status": "resolved",
+          "created_at": "2026-11-10T17:55:03.552Z",
+          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "truncated": false
+        },
+        {
+          "status": "investigating",
+          "created_at": "2026-11-10T17:46:33.967Z",
+          "body": "We continue to investigate elevated response times for Git operations and pull requests. Actions workflows are recovering. Pull request processing has shown some improvement, but users continue to experience delays and failures. We’re monitoring the impact and working to restore normal service.",
+          "truncated": false
+        },
+        {
+          "status": "investigating",
+          "created_at": "2026-11-10T16:10:52.292Z",
+          "body": "We are investigating reports of degraded performance for Actions and Pull Requests",
+          "truncated": false
+        }
+      ],
+      "updates_total": 9,
+      "url": "https://stspg.io/16nsnk2th3rv"
+    }
+  },
+  {
+    "event": "model_start",
+    "step": 3
+  },
+  {
+    "event": "model",
+    "step": 3,
+    "finish": "stop",
+    "tool_calls": 0
+  },
+  {
+    "event": "completed",
+    "step": 3
+  },
+  {
+    "event": "result",
+    "result": {
+      "status": "completed",
+      "answer": "Dựa trên dữ liệu ghi nhận tại thời điểm snapshot (**2026-11-11T12:22:37.643256+00:00**):\n\n### 1. Trạng thái hiện tại\n- **Trạng thái tổng quan GitHub:** *All Systems Operational* (Không có sự cố đang diễn ra).\n- **Trạng thái GitHub Actions:** **Operational** (Hoạt động bình thường).\n- **Nguồn:** [GitHub Status](https://www.githubstatus.com)\n\n---\n\n### 2. Các sự cố gần đây liên quan đến GitHub Actions (Đều đã được xử lý - Resolved)\n\n*(Lưu ý: Dữ liệu API chỉ trả về một số cập nhật chính; các mốc trung gian được tóm lược theo số lượng update thực tế).*\n\n#### **1. Incident with Git Operations and Pull Requests** (`hnf21m9jkl3c`)\n- **Trạng thái:** Resolved\n- **Phạm vi thành phần ảnh hưởng:** Pull Requests, Actions\n- **Mốc thời gian (UTC):**\n  - **2026-11-10T16:10:52Z:** Bắt đầu điều tra báo cáo suy giảm hiệu năng trên Actions và Pull Requests.\n  - **2026-11-10T17:46:33Z:** Ghi nhận thời gian phản hồi tăng cao với Git operations và Pull Requests; workflow của Actions bắt đầu hồi phục.\n  - **2026-11-10T17:55:03Z:** Sự cố được giải quyết hoàn toàn.\n- **Tổng số cập nhật:** 9 cập nhật (đã lược bớt các cập nhật trung gian).\n- **Nguồn / Chi tiết sự cố:** [Incident hnf21m9jkl3c](https://stspg.io/16nsnk2th3rv)\n\n#### **2. Incident with Actions and Checks API** (`tp8cghg7tlc4`)\n- **Trạng thái:** Resolved\n- **Phạm vi thành phần ảnh hưởng:** Webhooks, Actions, Pages\n- **Mốc thời gian (UTC):**\n  - **2026-11-09T18:12:37Z:** Điều tra báo cáo suy giảm độ sẵn sàng (degraded availability) của Actions.\n  - **2026-11-09T18:43:24Z:** Tình trạng suy giảm ảnh hưởng đến Actions, Pages và Webhooks đã được giảm thiểu (mitigated).\n  - **2026-11-09T18:59:32Z:** Sự cố được giải quyết hoàn toàn.\n- **Tổng số cập nhật:** 7 cập nhật.\n- **Nguồn / Chi tiết sự cố:** [Incident tp8cghg7tlc4](https://stspg.io/7yw63xl9ztrv)\n\n#### **3. Incident with Webhooks and Actions** (`xxb3l2bm76dr`)\n- **Trạng thái:** Resolved\n- **Phạm vi thành phần ảnh hưởng:** Webhooks, Actions\n- **Mốc thời gian (UTC):**\n  - **2026-11-09T10:00:35Z:** Điều tra báo cáo suy giảm hiệu năng trên Actions và Webhooks.\n  - **2026-11-09T11:45:07Z:** Khắc phục và theo dõi tính ổn định.\n  - **2026-11-09T11:50:35Z:** Sự cố được giải quyết hoàn toàn.\n- **Tổng số cập nhật:** 8 cập nhật.\n- **Nguồn / Chi tiết sự cố:** [Incident xxb3l2bm76dr](https://stspg.io/4vdghm7tycm4)\n\n#### **4. Incident with Actions** (`t89g2q1800fr`)\n- **Trạng thái:** Resolved\n- **Phạm vi thành phần ảnh hưởng:** Actions\n- **Mốc thời gian (UTC):**\n  - **2026-11-05T16:50:11Z:** Điều tra báo cáo suy giảm hiệu năng riêng đối với Actions.\n  - **2026-11-05T17:04:46Z:** Tình trạng suy giảm được giảm thiểu.\n  - **2026-11-05T17:42:35Z:** Sự cố được giải quyết hoàn toàn.\n- **Tổng số cập nhật:** 4 cập nhật.\n- **Nguồn / Chi tiết sự cố:** [Incident t89g2q1800fr](https://stspg.io/lv4q3xm9r0rk)",
+      "trace": [
+        {
+          "event": "model",
+          "step": 1,
+          "finish": "tool_calls",
+          "tool_calls": 1
+        },
+        {
+          "event": "tool",
+          "step": 1,
+          "name": "get_status",
+          "tool_call_id": "call_14306857464915203231",
+          "arguments": {
+            "provider": "github",
+            "component": "Actions"
+          },
+          "result": {
+            "provider": "github",
+            "captured_at": "2026-11-11T12:22:37.643256+00:00",
+            "overall": {
+              "indicator": "none",
+              "description": "All Systems Operational"
+            },
+            "components": [
+              {
+                "name": "Actions",
+                "status": "operational"
+              }
+            ],
+            "incidents": [
+              {
+                "id": "hnf21m9jkl3c",
+                "name": "Incident with Git Operations and Pull Requests",
+                "status": "resolved",
+                "updated_at": "2026-11-10T17:55:03.579Z"
+              },
+              {
+                "id": "tp8cghg7tlc4",
+                "name": "Incident with Actions and Checks API",
+                "status": "resolved",
+                "updated_at": "2026-11-09T18:59:32.604Z"
+              },
+              {
+                "id": "xxb3l2bm76dr",
+                "name": "Incident with Webhooks and Actions",
+                "status": "resolved",
+                "updated_at": "2026-11-09T11:50:35.805Z"
+              },
+              {
+                "id": "pfbmpxxfq1cy",
+                "name": "Degraded performance for multiple GitHub services",
+                "status": "resolved",
+                "updated_at": "2026-11-06T00:20:49.369Z"
+              },
+              {
+                "id": "t89g2q1800fr",
+                "name": "Incident with Actions",
+                "status": "resolved",
+                "updated_at": "2026-11-05T17:42:35.455Z"
+              }
+            ],
+            "matching_incidents_in_last_50": 26,
+            "note": "Chỉ tìm theo chuỗi trong 50 incident gần nhất; không tìm thấy không chứng minh không có sự cố.",
+            "source": "https://www.githubstatus.com"
+          }
+        },
+        {
+          "event": "model",
+          "step": 2,
+          "finish": "tool_calls",
+          "tool_calls": 4
+        },
+        {
+          "event": "tool",
+          "step": 2,
+          "name": "get_incident_details",
+          "tool_call_id": "call_14806925060542230630",
+          "arguments": {
+            "provider": "github",
+            "incident_id": "tp8cghg7tlc4"
+          },
+          "result": {
+            "ok": true,
+            "provider": "github",
+            "captured_at": "2026-11-11T12:22:37.643256+00:00",
+            "id": "tp8cghg7tlc4",
+            "name": "Incident with Actions and Checks API",
+            "status": "resolved",
+            "created_at": "2026-11-09T18:12:37.242Z",
+            "updated_at": "2026-11-09T18:59:32.604Z",
+            "components": [
+              "Webhooks",
+              "Actions",
+              "Pages"
+            ],
+            "updates": [
+              {
+                "status": "resolved",
+                "created_at": "2026-11-09T18:59:32.565Z",
+                "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+                "truncated": false
+              },
+              {
+                "status": "monitoring",
+                "created_at": "2026-11-09T18:43:24.557Z",
+                "body": "The degradation affecting Actions, Pages and Webhooks has been mitigated. We are monitoring to ensure stability.",
+                "truncated": false
+              },
+              {
+                "status": "investigating",
+                "created_at": "2026-11-09T18:12:37.331Z",
+                "body": "We are investigating reports of degraded availability for Actions",
+                "truncated": false
+              }
+            ],
+            "updates_total": 7,
+            "url": "https://stspg.io/7yw63xl9ztrv"
+          }
+        },
+        {
+          "event": "tool",
+          "step": 2,
+          "name": "get_incident_details",
+          "tool_call_id": "call_14806925060542233555",
+          "arguments": {
+            "provider": "github",
+            "incident_id": "xxb3l2bm76dr"
+          },
+          "result": {
+            "ok": true,
+            "provider": "github",
+            "captured_at": "2026-11-11T12:22:37.643256+00:00",
+            "id": "xxb3l2bm76dr",
+            "name": "Incident with Webhooks and Actions",
+            "status": "resolved",
+            "created_at": "2026-11-09T10:00:35.232Z",
+            "updated_at": "2026-11-09T11:50:35.805Z",
+            "components": [
+              "Webhooks",
+              "Actions"
+            ],
+            "updates": [
+              {
+                "status": "resolved",
+                "created_at": "2026-11-09T11:50:35.774Z",
+                "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+                "truncated": false
+              },
+              {
+                "status": "monitoring",
+                "created_at": "2026-11-09T11:45:07.476Z",
+                "body": "The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability.",
+                "truncated": false
+              },
+              {
+                "status": "investigating",
+                "created_at": "2026-11-09T10:00:35.648Z",
+                "body": "We are investigating reports of degraded performance for Actions and Webhooks",
+                "truncated": false
+              }
+            ],
+            "updates_total": 8,
+            "url": "https://stspg.io/4vdghm7tycm4"
+          }
+        },
+        {
+          "event": "tool",
+          "step": 2,
+          "name": "get_incident_details",
+          "tool_call_id": "call_14806925060542232384",
+          "arguments": {
+            "incident_id": "t89g2q1800fr",
+            "provider": "github"
+          },
+          "result": {
+            "ok": true,
+            "provider": "github",
+            "captured_at": "2026-11-11T12:22:37.643256+00:00",
+            "id": "t89g2q1800fr",
+            "name": "Incident with Actions",
+            "status": "resolved",
+            "created_at": "2026-11-05T16:50:11.086Z",
+            "updated_at": "2026-11-05T17:42:35.455Z",
+            "components": [
+              "Actions"
+            ],
+            "updates": [
+              {
+                "status": "resolved",
+                "created_at": "2026-11-05T17:42:35.425Z",
+                "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+                "truncated": false
+              },
+              {
+                "status": "monitoring",
+                "created_at": "2026-11-05T17:04:46.807Z",
+                "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+                "truncated": false
+              },
+              {
+                "status": "investigating",
+                "created_at": "2026-11-05T16:50:11.189Z",
+                "body": "We are investigating reports of degraded performance for Actions",
+                "truncated": false
+              }
+            ],
+            "updates_total": 4,
+            "url": "https://stspg.io/lv4q3xm9r0rk"
+          }
+        },
+        {
+          "event": "tool",
+          "step": 2,
+          "name": "get_incident_details",
+          "tool_call_id": "call_14806925060542231213",
+          "arguments": {
+            "incident_id": "hnf21m9jkl3c",
+            "provider": "github"
+          },
+          "result": {
+            "ok": true,
+            "provider": "github",
+            "captured_at": "2026-11-11T12:22:37.643256+00:00",
+            "id": "hnf21m9jkl3c",
+            "name": "Incident with Git Operations and Pull Requests",
+            "status": "resolved",
+            "created_at": "2026-11-10T16:10:52.174Z",
+            "updated_at": "2026-11-10T17:55:03.579Z",
+            "components": [
+              "Pull Requests",
+              "Actions"
+            ],
+            "updates": [
+              {
+                "status": "resolved",
+                "created_at": "2026-11-10T17:55:03.552Z",
+                "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+                "truncated": false
+              },
+              {
+                "status": "investigating",
+                "created_at": "2026-11-10T17:46:33.967Z",
+                "body": "We continue to investigate elevated response times for Git operations and pull requests. Actions workflows are recovering. Pull request processing has shown some improvement, but users continue to experience delays and failures. We’re monitoring the impact and working to restore normal service.",
+                "truncated": false
+              },
+              {
+                "status": "investigating",
+                "created_at": "2026-11-10T16:10:52.292Z",
+                "body": "We are investigating reports of degraded performance for Actions and Pull Requests",
+                "truncated": false
+              }
+            ],
+            "updates_total": 9,
+            "url": "https://stspg.io/16nsnk2th3rv"
+          }
+        },
+        {
+          "event": "model",
+          "step": 3,
+          "finish": "stop",
+          "tool_calls": 0
+        },
+        {
+          "event": "completed",
+          "step": 3
+        }
+      ],
+      "usage": [
+        {
+          "completion_tokens": 22,
+          "prompt_tokens": 1154,
+          "total_tokens": 1225
+        },
+        {
+          "completion_tokens": 139,
+          "prompt_tokens": 1690,
+          "total_tokens": 2295
+        },
+        {
+          "completion_tokens": 1094,
+          "prompt_tokens": 3933,
+          "total_tokens": 5889
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,5 @@
+# Preserve exact bytes of saved evidence so recorded SHA-256 hashes survive Git.
+/eval_before.json -text
+/eval_after.json -text
+/artifacts/baseline/agent.py -text
+/artifacts/evaluated_agent.py -text

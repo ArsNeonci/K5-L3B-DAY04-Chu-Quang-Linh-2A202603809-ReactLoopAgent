@@ -1,0 +1,22 @@
+{
+  "unit_tests_passed": 51,
+  "configs_equal": true,
+  "baseline_and_protected_inputs_unchanged": true,
+  "full_evals_scored": true,
+  "all_runs_completed": true,
+  "mechanical_violations": 0,
+  "notes_sections_complete": true,
+  "api_key_scan": "passed",
+  "env_tracked": false,
+  "documentation_utf8_checked": true,
+  "quoted_evidence_matches_reports": true,
+  "demo_trace_pointers_checked": true,
+  "code_and_reports_unchanged_during_documentation_review": true,
+  "no_new_commit": true,
+  "no_staged_changes": true,
+  "repository_name_deferred_by_user": true,
+  "provenance_notice_2026_11_12": {
+    "status": "historical_record_not_current_verification",
+    "details": "See REPORT_PROVENANCE.md. Current eval_before.json does not match the recorded original baseline SHA-256; do not claim baseline preservation or CP4 improvement from the current report pair."
+  }
+}
